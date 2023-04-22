@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputeShader", "ComputeShader.csproj", "{DF37CF62-C187-400C-BA2A-A49E0F6EA87C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF37CF62-C187-400C-BA2A-A49E0F6EA87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF37CF62-C187-400C-BA2A-A49E0F6EA87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF37CF62-C187-400C-BA2A-A49E0F6EA87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF37CF62-C187-400C-BA2A-A49E0F6EA87C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
