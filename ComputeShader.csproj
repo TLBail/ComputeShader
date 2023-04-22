@@ -12,11 +12,11 @@
       <PackageReference Include="Silk.NET" Version="2.17.1" />
       <PackageReference Include="Silk.NET.OpenGL" Version="2.17.1" />
       <PackageReference Include="Silk.NET.OpenGL.Extensions.ImGui" Version="2.17.1" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Assets" />
-      <Folder Include="Shader" />
     </ItemGroup>
 
 </Project>

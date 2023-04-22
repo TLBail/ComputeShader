@@ -5,6 +5,7 @@ using Silk.NET.Maths;
 using Silk.NET.OpenGL;
 using Silk.NET.OpenGL.Extensions.ImGui;
 using Silk.NET.Windowing;
+using Color = System.Drawing.Color;
 
 namespace ComputeShader;
 
@@ -55,7 +56,8 @@ public sealed class OpenGl
         //Create a window.
         var options = WindowOptions.Default;
         options.Size = screenSize;
-        options.Title = "Silk circle";
+        options.API = new GraphicsAPI(ContextAPI.OpenGL, new APIVersion(4, 3));
+        options.Title = "Compute Shader";
         
         window = Window.Create(options);
     
@@ -81,6 +83,7 @@ public sealed class OpenGl
         //Set-up input context.
         input = window.CreateInput();
         Gl = window.CreateOpenGL();
+        glfw.SwapInterval(0);
 
         imGuiController = new ImGuiController(Gl, window, input);
 
@@ -91,7 +94,6 @@ public sealed class OpenGl
             primaryKeyboard.KeyDown += KeyDown;
         }
         initUniformBuffers();
-        Thread.CurrentThread.Priority = ThreadPriority.Highest;
         
         LoadEvent?.Invoke(Gl);
     }
@@ -108,7 +110,7 @@ public sealed class OpenGl
     }
 
     private unsafe void OnRender(double delta) {
-        Gl.Enable(EnableCap.DepthTest);
+        //Gl.Enable(EnableCap.DepthTest);
         Gl.ClearColor(CLEAR_COLOR);
         Gl.Clear((uint)(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit));
         DrawEvent?.Invoke(Gl);
