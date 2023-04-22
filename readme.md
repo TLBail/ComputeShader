@@ -1,0 +1,3 @@
+﻿# Title: Compute Shaders with Silk.NET
+
+This project demonstrates how to use compute shaders with Silk.NET in C#. Compute shaders are designed to take advantage of the parallel processing capabilities of GPUs for general purpose computing (GPGPU). By understanding the underlying concepts of compute shaders and stream programming on the GPU, you can harness the power of GPUs for various computational tasks.
